@@ -48,18 +48,9 @@
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
                         <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
                         <li class="nav-item"><a class="nav-link" href="accomodation.html">Accomodation</a></li>
                         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li class="nav-item submenu dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-haspopup="true" aria-expanded="false">Blog</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="elements.html">Elemests</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -86,7 +77,7 @@
             <div class="container">
                 <div class="hotel_booking_table">
                     <div class="col-md-3">
-                        <h2>Book<br> Your Room</h2>
+                        <h2 text-align:center,padding:0px>Book<br> Your Room</h2>
                     </div>
                     <form id="bookingform" method="post" action="index.php" style="width:100%;padding-left:0px" autocomplete="off">
 
@@ -204,7 +195,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="accomodation_item text-center">
                         <div class="hotel_img">
-                            <img src="image/room3.jpg" alt="">
+                            <img src="image/room5.jpg" alt="">
                         </div>
                         <a href="#">
                             <h4 class="sec_h4">Honeymoon Suite</h4>
@@ -253,29 +244,25 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="facilities_item">
                         <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and
-                            power.</p>
+                        <p>Our pools are designed to offer a sombre and a tranquil experience to the guests.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="facilities_item">
                         <h4 class="sec_h4"><i class="lnr lnr-car"></i>Rent a Car</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and
-                            power.</p>
+                        <p>24*7 Car Rental Services at your Door step. Wide varieties of Cars, with amazing offers.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="facilities_item">
                         <h4 class="sec_h4"><i class="lnr lnr-construction"></i>Gymnesium</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and
-                            power.</p>
+                        <p>Our Hotel exhibits a fully equipped fitness centre offering a range of technologies like cardio machines. </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="facilities_item">
                         <h4 class="sec_h4"><i class="lnr lnr-coffee-cup"></i>Bar</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and
-                            power.</p>
+                        <p>Fuchsia drapes, warm red light, and sequins set a dramatic & a musical tone for this night club.</p>
                     </div>
                 </div>
             </div>
@@ -289,10 +276,8 @@
             <div class="row">
                 <div class="col-md-6 d_flex align-items-center">
                     <div class="about_content ">
-                        <h2 class="title title_color">About Us <br>Our History<br>Mission & Vision</h2>
-                        <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher
-                            conduct standards especially in the workplace. That’s why it’s crucial that, as women, our
-                            behavior on the job is beyond reproach. inappropriate behavior is often laughed.</p>
+                        <h2 class="title title_color">About Us <br>Mission & Vision</h2>
+                        <p>Situated in the heart of Chennai, overlooking the city’s verdant foliage. It embodies the highest standards in Indian hospitality balanced with elegant restraint in a prime property with distinct personality. The Grand Peninsula has 522 rooms and 78 luxuriously appointed service apartments- collectively its 600 spacious guest rooms, suites and luxury service apartments, are the epitome of Indian grace and style, expertly delegated with thoughtful amenities.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -314,8 +299,39 @@
                 <div class="media testimonial_item">
                     <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
                     <div class="media-body">
-                        <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If
-                            you think about it, you travel across her face, and She is the </p>
+                        <p>Fantastic hotel, my room was incredible. Food was of great quality. The Italian and Asian restaurant were my favourite. If I need to come again, Grand Peninsula will be my hotel of choice! Brought some Fabelle chocolate home for the family, they loved it!</p>
+                        <a href="#">
+                            <h4 class="sec_h4">Fanny Spencer</h4>
+                        </a>
+                        <div class="star">
+                            <a href="#"><i class="fa fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star-half-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="media testimonial_item">
+                    <img class="rounded-circle" src="image/testtimonial-2.jpg" alt="">
+                    <div class="media-body">
+                        <p>By far one of the best properties i have stayed in. Excellent rooms especially the tower rooms(do book them if not much price difference). Better than even some of the luxury Oberoi properties. Food is amazing,right from breakfast at Madras pavillion to dinner at peshawri/pan-asia. Staff is very professional and take excellent care of guests. Location very close to airport</p>
+                        <a href="#">
+                            <h4 class="sec_h4">Fanny Spencer</h4>
+                        </a>
+                        <div class="star">
+                            <a href="#"><i class="fa fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star-half-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="media testimonial_item">
+                    <img class="rounded-circle" src="image/testtimonial-2.jpg" alt="">
+                    <div class="media-body">
+                        <p>Undoubtedly the best hotel in Chennai. The staff is warm & courteous and take care of every need. Rooms are nicely furnished and clean. Tower rooms are bigger and the hotel also has suites of 1 or 2 bedrooms for families with a fully stocked kitchenette, washer etc.The hotel is truly grand and frankly I could not have asked for anything else.</p>
                         <a href="#">
                             <h4 class="sec_h4">Fanny Spencer</h4>
                         </a>
@@ -331,42 +347,7 @@
                 <div class="media testimonial_item">
                     <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
                     <div class="media-body">
-                        <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If
-                            you think about it, you travel across her face, and She is the </p>
-                        <a href="#">
-                            <h4 class="sec_h4">Fanny Spencer</h4>
-                        </a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                    <div class="media-body">
-                        <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If
-                            you think about it, you travel across her face, and She is the </p>
-                        <a href="#">
-                            <h4 class="sec_h4">Fanny Spencer</h4>
-                        </a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                    <div class="media-body">
-                        <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If
-                            you think about it, you travel across her face, and She is the </p>
+                        <p>Stay in the tower rooms. Very large, luxurious. Very attentive staff. Beautiful hotel. Love the outdoor pools and garden on the 35th floor. Very nice spa as well. Breakfast is fantastic with large variety of foods. Do try the Utapam, Vada Sambar and Dosa. Also very good French Toast. The High Tea time and Happy Hour were included with our stay and made it worth it. All you can drink and eat. Good snacks. The staff is fantastic. Hang out in the hotel and relax. Shout out to Sidharth (waiter/bar keep) in the Tea lounge. Very good service.</p>
                         <a href="#">
                             <h4 class="sec_h4">Fanny Spencer</h4>
                         </a>
@@ -391,7 +372,7 @@
                 <div class="col-lg-6  col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <h6 class="footer_title">About Grand Peninsula </h6>
-                        <p>A stunning combination of luxirious stay, scenic beaches, rolling hills and lush green valleys. The Grand Peninsula is situated right at the heart of Goa's buzzling city.</p>
+                        <p>A stunning combination of luxirious stay, scenic beaches, rolling hills and lush green valleys. The Grand Peninsula is situated right at the heart of Chennai's buzzling city.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
