@@ -498,11 +498,11 @@ document.addEventListener("DOMContentLoaded", function() {
              {
                if(data==="wrong")
 {  
-  console.log(data);
+    alert("Failed!");
 }
-else if (data==="done")
+else if (data.includes("done"));
 {
-alert("Done!");
+alert("Success!");
 //   window.setTimeout(function(){ window.location = "home.php"; },100);
 }
 
