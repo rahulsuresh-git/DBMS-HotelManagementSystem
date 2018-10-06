@@ -108,7 +108,7 @@ else {
                     <div class="col-md-3">
                         <h2 text-align:center,padding:0px>Book<br> Your Room</h2>
                     </div>
-                    <form id="bookingform" method="post" action="index.php" style="width:100%;padding-left:0px" autocomplete="off">
+                    <form id="bookingform" method="post" action="booking.php" style="width:100%;padding-left:0px" autocomplete="off">
 
                     <div class="col-md-9">
                         <div class="boking_table">
@@ -140,7 +140,7 @@ else {
                                         <div class="input-group">
 
                                                    
-                                            <select class='form-control wide' name="roomtype" id="roomtype" required="required">
+                                            <select  name="roomtype" id="roomtype" required="required">
                                                 <option  disabled value="" selected hidden>Room Type</option>
 
                                                 <option value="Single Deluxe">Single Deluxe</option>
@@ -151,7 +151,7 @@ else {
                                             </select>
                                         </div>
                                         <div class="input-group">
-                                            <select class="wide">
+                                            <select class="wide"  required name="rooms">
                                                     <option  disabled value="" selected hidden>Room(s)</option>
                                                     <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -163,7 +163,7 @@ else {
                                 <div class="col-md-4">
                                     <div class="book_tabel_item">
                                             <div class="input-group">
-                                                    <select class="wide">
+                                                    <select class="wide"required  name="adult"> 
                                                             <option  disabled value="" selected hidden>Adults (12+ Years)</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
@@ -171,8 +171,10 @@ else {
                                                     </select>
                                                 </div>
                                         <div class="input-group">
-                                            <select class="wide">
+                                            <select class="wide" required name="child">
                                                     <option  disabled value="" selected hidden>Children (0-12 Years)</option>
+                                                    <option value="1">0</option>
+
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                             </select>
@@ -485,5 +487,27 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 </script>
+<script> $("#bookingform").submit(function(e) {
+      e.preventDefault(); // avoid to execute the actual submit of the form.
+      var url = $(this).attr("action"); // the script where you handle the form input.
+      $.ajax({
+             type: "POST",
+             url: url,
+             data: $("#bookingform").serialize(), // serializes the form's elements.
+             success: function(data)
+             {
+               if(data==="wrong")
+{  
+  console.log(data);
+}
+else if (data==="done")
+{
+alert("Done!");
+//   window.setTimeout(function(){ window.location = "home.php"; },100);
+}
+
+             }
+      });
+  });</script>
 
 </html>
