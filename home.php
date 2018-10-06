@@ -505,6 +505,7 @@ document.addEventListener("DOMContentLoaded", function() {
 else if (data.includes("done"));
 {
 alert("Success!");
+window.location="mybookings.php";
 //   window.setTimeout(function(){ window.location = "home.php"; },100);
 }
 

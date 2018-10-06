@@ -97,7 +97,7 @@ else {
             <div class="container">
             <br> <br><center><h2 style="color:white">Bookings</h2></center><br>
             <div class="progress-table-wrap">
-							<div class="progress-table">
+							<div class="progress-table" style="width:125%;margin-left:-150px"> 
 								<div class="table-head" style="text-align:center">
 									<div class="serial">User ID</div>
 									<div class="visit">Booking ID</div>
@@ -109,12 +109,16 @@ else {
 									<div class="visit">No. of Rooms</div>
 									<div class="visit">Adult</div>
 									<div class="visit">Child</div>
+									<div class="visit">Payment Status</div>
 
 								</div>
                 <?php 
-                
+            
                 $query = "SELECT b.uid, b.bookid, b.totalnights, b.totalcost,r.checkin, r.checkout, r.type,r.rooms, r.adult,
-                r.child FROM booking as b, registration as r where b.uid=r.uid";
+                r.child,r.status FROM booking b INNER JOIN registration r
+    on b.uid = r.uid
+INNER JOIN guest g
+   on g.uid=r.uid and g.email='$id'";
 $result = mysqli_query($conn,$query);
 
 
@@ -122,9 +126,9 @@ while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through re
     echo "<div class='table-row' style='text-align:center'>"; 
 
 echo "<div class='serial'>" . $row['uid'] . "</div>" ."<div class='visit' style='padding-left:30px'>". $row['bookid'] . "</div>"."<div class='visit' style='padding-left:60px'>" . $row['totalnights'] . "</div>" .
-"<div class='visit'>" . $row['totalcost'] . "</div>" ."<div class='visit'>" . $row['checkin'] . "</div>" ."<div class='visit'>" . $row['checkout'] . "</div>" .
-"<div class='visit'>" . $row['type'] . "</div>" ."<div class='visit' style='padding-left:60px'>" . $row['rooms'] . "</div>" ."<div class='visit' style='padding-left:30px'>" . $row['adult'] . "</div>" .
-"<div class='visit' style='margin-right:-50px'>" . $row['child'] . "</div>" ;  
+"<div class='visit'>" . $row['totalcost'] . "</div>" ."<div class='visit' style='margin-left:-50px'>" . $row['checkin'] . "</div>" ."<div class='visit'>" . $row['checkout'] . "</div>" .
+"<div class='visit'>" . $row['type'] . "</div>" ."<div class='visit' style='padding-left:20px'>" . $row['rooms'] . "</div>" ."<div class='visit' >" . $row['adult'] . "</div>" .
+"<div class='visit' >" . $row['child'] . "</div>". "<div class='visit' style='margin-right:-20px;color:red;font-weight:bold'>" . $row['status'] . "</div>";  
 echo "</div>";
 }
 
@@ -132,7 +136,15 @@ echo "</div>";
 							
 					
 						</div>
-					</div>
+					</div><div class="button-group-area mt-40"> 
+						<a  onclick="edit();" style="font-size:15px;display:inline-block" href="#" class="genric-btn danger circle">Edit Booking</a>
+                        <form id="payment" method="POST" action="payment.php">
+    
+                        <div style="display:inline-block"><button  style="font-size:15px" href="#" class="genric-btn info circle">Make Payment</button>
+<div>
+                    </form>
+                    </div>
+
             </div>
         </div>
        
@@ -321,27 +333,36 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 </script>
-<script> $("#bookingform").submit(function(e) {
+<script> $("#payment").submit(function(e) {
       e.preventDefault(); // avoid to execute the actual submit of the form.
       var url = $(this).attr("action"); // the script where you handle the form input.
+      console.log(url);
       $.ajax({
              type: "POST",
              url: url,
-             data: $("#bookingform").serialize(), // serializes the form's elements.
+             data: $("#payment").serialize(), // serializes the form's elements.
              success: function(data)
              {
                if(data==="wrong")
 {  
-    alert("Failed!");
+    alert("Payment Failed! Retry.");
 }
 else if (data.includes("done"));
 {
 alert("Success!");
+window.location.reload();
 //   window.setTimeout(function(){ window.location = "home.php"; },100);
 }
 
              }
       });
   });</script>
+  <script>
+  function edit()
+  {
+      alert("To edit the booking, kindly make a new booking with changes in order to overwrite the existing booking.");
+      window.location="home.php";
+  }
+  </script>
 
 </html>
