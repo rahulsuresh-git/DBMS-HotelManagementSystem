@@ -1,5 +1,27 @@
+<?php
+session_start();
 
-<?php 
+error_reporting(0);
+$ip = getenv('HTTP_CLIENT_IP')?:
+getenv('HTTP_X_FORWARDED_FOR')?:
+getenv('HTTP_X_FORWARDED')?:
+getenv('HTTP_FORWARDED_FOR')?:
+getenv('HTTP_FORWARDED')?:
+getenv('REMOTE_ADDR');
+date_default_timezone_set('Asia/Kolkata');
+
+$today = date('l');
+
+if (isset($_SESSION['username'])){
+    $id = $_SESSION['username'];
+    include('db.php');
+    include('staff_data.php');
+
+}
+else {
+	header('Location: index.php');
+	die();
+}
 
 ?>
 <!doctype html>

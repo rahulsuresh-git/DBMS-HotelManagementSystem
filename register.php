@@ -40,10 +40,12 @@ if(isset($_SESSION["username"]))
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <style>
-#incorrect{
-  display:none;
-  visibility:hidden;
-  text-align:center;
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
 </style>
 </head>
@@ -51,18 +53,47 @@ if(isset($_SESSION["username"]))
 <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" id="myform" action="check.php" autocomplete="off">
+				<form class="login100-form validate-form" id="myform" action="registercheck.php" autocomplete="off">
 					<span class="login100-form-title p-b-26">
-						Welcome
+					Registration Portal
 					</span>
 					<span class="login100-form-title p-b-48">
 					<p style="font-size:20px;font-weight:'thinner'">Hotel Management System v1.0</p>
+
 					</span>
 
 					<div class="wrap-input100 validate-input" >
-						<input class="input100" type="text" style="text-align:left;margin:0;padding:0"  required name="username">
+						<input class="input100" type="text" style="text-align:left;margin:0;padding:0"  required name="name">
+						<span class="focus-input100" data-placeholder="Full Name"></span>
+					</div>
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" style="text-align:left;margin:0;padding:0"  required name="email">
 						<span class="focus-input100" data-placeholder="Email ID"></span>
 					</div>
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" style="text-align:left;margin:0;padding:0"  required name="address">
+						<span class="focus-input100" data-placeholder="Address"></span>
+					</div>
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="number" style="text-align:left;margin:0;padding:0"  required name="age">
+						<span class="focus-input100" data-placeholder="Age"></span>
+					</div>
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" style="text-align:left;margin:0;padding:0"  required name="nationality">
+						<span class="focus-input100" data-placeholder="Nationality"></span>
+					</div>
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" style="text-align:left;margin:0;padding:0"  required name="contact">
+						<span class="focus-input100" data-placeholder="Contact Number"></span>
+					</div>
+	
+					<div class="wrap-input100 validate-input" >
+					<p>Gender</p>
+
+<select class="form-control" required name="gender">
+	<option>Male</option>
+	<option>Female</option>
+    </select>					</div>
 
 					<div class="wrap-input100 validate-input" >
 						<span class="btn-show-pass">
@@ -76,21 +107,14 @@ if(isset($_SESSION["username"]))
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button type="submit" name="submit" id="submit" class="login100-form-btn">
-								Login
+								Submit
 							</button>
 						</div>
 					</div>
 
 				</form>
 				
-				<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-						<center>	<a href="register.php"><button  id="register" class="login100-form-btn">
-								Register 
-							</button></a></center>
-						</div>
-					</div>
+			
 			</div>
 		</div>
 	</div>
@@ -112,18 +136,11 @@ if(isset($_SESSION["username"]))
              success: function(data)
              {
                if(data==="wrong")
-{  document.getElementById("incorrect").style.color="red";
-  document.getElementById("incorrect").innerHTML="Incorrect username or password!";
-
-  document.getElementById("incorrect").style.display="inline";
-  document.getElementById("incorrect").style.visibility="visible";
+{ alert("Some error occurred!");
 }
 else if (data==="done")
 {
-  document.getElementById("incorrect").style.display="inline";
-  document.getElementById("incorrect").style.visibility="visible";
-  document.getElementById("incorrect").style.color="green";
-  document.getElementById("incorrect").innerHTML="Success!";
+  alert("Success!");
   window.setTimeout(function(){ window.location = "home.php"; },0);
 }
 
