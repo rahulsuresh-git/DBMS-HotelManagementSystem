@@ -98,17 +98,17 @@ else {
             <br> <br><center><h2 style="color:white">Bookings</h2></center><br>
             <div class="progress-table-wrap">
 							<div class="progress-table">
-								<div class="table-head">
+								<div class="table-head" style="text-align:center">
 									<div class="serial">User ID</div>
-									<div class="country">Booking ID</div>
+									<div class="visit">Booking ID</div>
 									<div class="visit">Total Nights</div>
-                                    <div class="serial">Total Cost</div>
-                                    <div class="serial">Check-In Date</div>
-									<div class="serial">Check-Out Date</div>
-									<div class="serial">Room Type</div>
-									<div class="serial">No. of Rooms</div>
-									<div class="serial">Adult</div>
-									<div class="serial">Child</div>
+                                    <div class="visit">Total Cost</div>
+                                    <div class="visit">Check-In Date</div>
+									<div class="visit">Check-Out Date</div>
+									<div class="visit">Room Type</div>
+									<div class="visit">No. of Rooms</div>
+									<div class="visit">Adult</div>
+									<div class="visit">Child</div>
 
 								</div>
                 <?php 
@@ -117,84 +117,19 @@ else {
                 r.child FROM booking as b, registration as r where b.uid=r.uid";
 $result = mysqli_query($conn,$query);
 
-echo "<div class='table-row'>"; 
 
 while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
-echo "<div>" . $row['uid'] . "</div>" ."<div>". $row['bookid'] . "</div>";  
+    echo "<div class='table-row' style='text-align:center'>"; 
+
+echo "<div class='serial'>" . $row['uid'] . "</div>" ."<div class='visit' style='padding-left:30px'>". $row['bookid'] . "</div>"."<div class='visit' style='padding-left:60px'>" . $row['totalnights'] . "</div>" .
+"<div class='visit'>" . $row['totalcost'] . "</div>" ."<div class='visit'>" . $row['checkin'] . "</div>" ."<div class='visit'>" . $row['checkout'] . "</div>" .
+"<div class='visit'>" . $row['type'] . "</div>" ."<div class='visit' style='padding-left:60px'>" . $row['rooms'] . "</div>" ."<div class='visit' style='padding-left:30px'>" . $row['adult'] . "</div>" .
+"<div class='visit' style='margin-right:-50px'>" . $row['child'] . "</div>" ;  
+echo "</div>";
 }
 
-echo "</div>"; 
                 ?>
-								<div class="table-row">
-									<div class="serial">02</div>
-									<div class="country"> <img src="image/elements/f2.jpg" alt="flag">Canada</div>
-									<div class="visit">645032</div>
-									<div class="percentage">
-										<div class="progress">
-											<div class="progress-bar color-2" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="table-row">
-									<div class="serial">03</div>
-									<div class="country"> <img src="image/elements/f3.jpg" alt="flag">Canada</div>
-									<div class="visit">645032</div>
-									<div class="percentage">
-										<div class="progress">
-											<div class="progress-bar color-3" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="table-row">
-									<div class="serial">04</div>
-									<div class="country"> <img src="image/elements/f4.jpg" alt="flag">Canada</div>
-									<div class="visit">645032</div>
-									<div class="percentage">
-										<div class="progress">
-											<div class="progress-bar color-4" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="table-row">
-									<div class="serial">05</div>
-									<div class="country"> <img src="image/elements/f5.jpg" alt="flag">Canada</div>
-									<div class="visit">645032</div>
-									<div class="percentage">
-										<div class="progress">
-											<div class="progress-bar color-5" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="table-row">
-									<div class="serial">06</div>
-									<div class="country"> <img src="image/elements/f6.jpg" alt="flag">Canada</div>
-									<div class="visit">645032</div>
-									<div class="percentage">
-										<div class="progress">
-											<div class="progress-bar color-6" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="table-row">
-									<div class="serial">07</div>
-									<div class="country"> <img src="image/elements/f7.jpg" alt="flag">Canada</div>
-									<div class="visit">645032</div>
-									<div class="percentage">
-										<div class="progress">
-											<div class="progress-bar color-7" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="table-row">
-									<div class="serial">08</div>
-									<div class="country"> <img src="image/elements/f8.jpg" alt="flag">Canada</div>
-									<div class="visit">645032</div>
-									<div class="percentage">
-										<div class="progress">
-											<div class="progress-bar color-8" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
+							
 					
 						</div>
 					</div>
