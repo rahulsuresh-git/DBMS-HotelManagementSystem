@@ -15,7 +15,6 @@ $today = date('l');
 if (isset($_SESSION['username'])){
     $id = $_SESSION['username'];
     include('db.php');
-    include('staff_data.php');
 
 }
 else {

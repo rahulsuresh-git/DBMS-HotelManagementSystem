@@ -117,14 +117,14 @@ if(isset($_SESSION["username"]))
 
   document.getElementById("incorrect").style.display="inline";
   document.getElementById("incorrect").style.visibility="visible";
-}
+  console.log(data);}
 else if (data==="done")
 {
   document.getElementById("incorrect").style.display="inline";
   document.getElementById("incorrect").style.visibility="visible";
   document.getElementById("incorrect").style.color="green";
   document.getElementById("incorrect").innerHTML="Success!";
-  window.setTimeout(function(){ window.location = "home.php"; },0);
+  window.setTimeout(function(){ window.location = "home.php"; },100);
 }
 
              }

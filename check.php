@@ -17,8 +17,7 @@ include('db.php');
            if(mysqli_num_rows($result) > 0)  
            {  
                 $_SESSION['username'] = $username;  
-                $_SESSION['id'] = $result['uid'];
-            
+     
 
                 echo 'done';
            }  

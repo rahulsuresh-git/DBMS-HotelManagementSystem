@@ -20,7 +20,8 @@ $uid=rand(1,100);
            $result = mysqli_query($conn, $query);  
            if($result)  
            {  
-   
+            $query = "INSERT INTO auth values ('$uid','$email','$password')";  
+            $result = mysqli_query($conn, $query);  
                 echo 'done';
            }  
            else  
