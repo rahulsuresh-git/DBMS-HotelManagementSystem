@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-error_reporting(0);
 $ip = getenv('HTTP_CLIENT_IP')?:
 getenv('HTTP_X_FORWARDED_FOR')?:
 getenv('HTTP_X_FORWARDED')?:
@@ -15,6 +14,13 @@ $today = date('l');
 if (isset($_SESSION['username'])){
     $id = $_SESSION['username'];
     include('db.php');
+
+
+    $query = "SELECT * FROM guest WHERE email = '$id'";  
+    $result = mysqli_query($conn, $query);  
+    $row = mysqli_fetch_array($result);
+    $name=$row['name'];
+
 
 }
 else {
@@ -73,6 +79,8 @@ else {
                         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+
                     </ul>
                 </div>
             </nav>
@@ -86,7 +94,7 @@ else {
             <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
             <div class="container">
                 <div class="banner_content text-center">
-                    <h6>Away from monotonous life</h6>
+                    <h6>Welcome back, <? echo $name;?></h6>
                     <h2>Relax Your Mind</h2>
                     <p>Service is exceptionally friendly and amenities are plentiful, ensuring the most pleasurable and
                         memorable stay.</p>
