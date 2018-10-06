@@ -151,7 +151,7 @@ else {
                                             </select>
                                         </div>
                                         <div class="input-group">
-                                            <select class="wide"  required name="rooms">
+                                            <select  class="wide" required name="rooms">
                                                     <option  disabled value="" selected hidden>Room(s)</option>
                                                     <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -163,7 +163,7 @@ else {
                                 <div class="col-md-4">
                                     <div class="book_tabel_item">
                                             <div class="input-group">
-                                                    <select class="wide"required  name="adult"> 
+                                                    <select  class="wide" required  name="adult"> 
                                                             <option  disabled value="" selected hidden>Adults (12+ Years)</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
@@ -171,9 +171,9 @@ else {
                                                     </select>
                                                 </div>
                                         <div class="input-group">
-                                            <select class="wide" required name="child">
+                                            <select  class="wide" required name="child">
                                                     <option  disabled value="" selected hidden>Children (0-12 Years)</option>
-                                                    <option value="1">0</option>
+                                                    <option value="0">0</option>
 
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>

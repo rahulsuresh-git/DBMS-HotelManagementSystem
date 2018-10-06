@@ -27,7 +27,7 @@ $adultpernight=$row['adult'];
 $adultcost=$adult * $adultpernight;
 $childpernight=$row['child'];
 $childcost=$child * $childpernight;
-$totalcost= $nights*($adultcost+$childcost);
+$totalcost= $rooms * ($nights*($adultcost+$childcost));
 
 
 
@@ -40,7 +40,7 @@ $query = "REPLACE INTO registration values ('$uid','$checkin','$checkout','$room
         date_default_timezone_set('Asia/Kolkata'); 
         $tp= date("Y-m-d H:i:s"); 
 
-        $query = "REPLACE INTO booking values ('$uid','$bookid','$totalcost','$tp')";  
+        $query = "REPLACE INTO booking values ('$uid','$bookid','$nights','$totalcost','$tp')";  
         if( mysqli_query($conn, $query)){
               echo "done";
         }
