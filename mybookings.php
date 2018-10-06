@@ -95,16 +95,114 @@ else {
         <div class="booking_table d_flex align-items-center">
             <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
             <div class="container">
-                <div class="banner_content text-center">
-                    <h6>Welcome back, <? echo $name;?></h6>
-                    <h2>Relax Your Mind</h2>
-                    <p>Service is exceptionally friendly and amenities are plentiful, ensuring the most pleasurable and
-                        memorable stay.</p>
-                    <a href="#" class="btn theme_btn button_hover">Explore now</a>
-                </div>
+            <br> <br><center><h2 style="color:white">Bookings</h2></center><br>
+            <div class="progress-table-wrap">
+							<div class="progress-table">
+								<div class="table-head">
+									<div class="serial">User ID</div>
+									<div class="country">Booking ID</div>
+									<div class="visit">Total Nights</div>
+                                    <div class="serial">Total Cost</div>
+                                    <div class="serial">Check-In Date</div>
+									<div class="serial">Check-Out Date</div>
+									<div class="serial">Room Type</div>
+									<div class="serial">No. of Rooms</div>
+									<div class="serial">Adult</div>
+									<div class="serial">Child</div>
+
+								</div>
+                <?php 
+                
+                $query = "SELECT b.uid, b.bookid, b.totalnights, b.totalcost,r.checkin, r.checkout, r.type,r.rooms, r.adult,
+                r.child FROM booking as b, registration as r where b.uid=r.uid";
+$result = mysqli_query($conn,$query);
+
+echo "<div class='table-row'>"; 
+
+while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
+echo "<div>" . $row['uid'] . "</div>" ."<div>". $row['bookid'] . "</div>";  
+}
+
+echo "</div>"; 
+                ?>
+								<div class="table-row">
+									<div class="serial">02</div>
+									<div class="country"> <img src="image/elements/f2.jpg" alt="flag">Canada</div>
+									<div class="visit">645032</div>
+									<div class="percentage">
+										<div class="progress">
+											<div class="progress-bar color-2" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+								<div class="table-row">
+									<div class="serial">03</div>
+									<div class="country"> <img src="image/elements/f3.jpg" alt="flag">Canada</div>
+									<div class="visit">645032</div>
+									<div class="percentage">
+										<div class="progress">
+											<div class="progress-bar color-3" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+								<div class="table-row">
+									<div class="serial">04</div>
+									<div class="country"> <img src="image/elements/f4.jpg" alt="flag">Canada</div>
+									<div class="visit">645032</div>
+									<div class="percentage">
+										<div class="progress">
+											<div class="progress-bar color-4" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+								<div class="table-row">
+									<div class="serial">05</div>
+									<div class="country"> <img src="image/elements/f5.jpg" alt="flag">Canada</div>
+									<div class="visit">645032</div>
+									<div class="percentage">
+										<div class="progress">
+											<div class="progress-bar color-5" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+								<div class="table-row">
+									<div class="serial">06</div>
+									<div class="country"> <img src="image/elements/f6.jpg" alt="flag">Canada</div>
+									<div class="visit">645032</div>
+									<div class="percentage">
+										<div class="progress">
+											<div class="progress-bar color-6" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+								<div class="table-row">
+									<div class="serial">07</div>
+									<div class="country"> <img src="image/elements/f7.jpg" alt="flag">Canada</div>
+									<div class="visit">645032</div>
+									<div class="percentage">
+										<div class="progress">
+											<div class="progress-bar color-7" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+								<div class="table-row">
+									<div class="serial">08</div>
+									<div class="country"> <img src="image/elements/f8.jpg" alt="flag">Canada</div>
+									<div class="visit">645032</div>
+									<div class="percentage">
+										<div class="progress">
+											<div class="progress-bar color-8" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+					
+						</div>
+					</div>
             </div>
         </div>
-        <div class="hotel_booking_area position">
+       
+
+        <!-- <div class="hotel_booking_area position">
             <div class="container">
                 <div class="hotel_booking_table">
                     <div class="col-md-3">
@@ -191,212 +289,11 @@ else {
                 </form>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
     <!--================Banner Area =================-->
 
-    <!--================ Accomodation Area  =================-->
-    <section class="accomodation_area section_gap">
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_color">Hotel Accomodation</h2>
-                <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, </p>
-            </div>
-            <div class="row mb_30">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room1.jpg" alt="">
-                        </div>
-                        <a href="#">
-                            <h4 class="sec_h4">Single Deluxe Room</h4>
-                        </a>
-                        <h5>Rs.5000<small>/night</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room2.jpg" alt="">
-                        </div>
-                        <a href="#">
-                            <h4 class="sec_h4">Double Deluxe Room</h4>
-                        </a>
-                        <h5>Rs.8000<small>/night</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room5.jpg" alt="">
-                        </div>
-                        <a href="#">
-                            <h4 class="sec_h4">Honeymoon Suite</h4>
-                        </a>
-                        <h5>Rs.10000<small>/night</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room4.jpg" alt="">
-                        </div>
-                        <a href="#">
-                            <h4 class="sec_h4">Presidential Suite</h4>
-                        </a>
-                        <h5>Rs.15000<small>/night</small></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ Accomodation Area  =================-->
-
-    <!--================ Facilities Area  =================-->
-    <section class="facilities_area section_gap">
-        <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">
-        </div>
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_w">Royal Facilities</h2>
-                <p>Who are in extremely love with eco friendly system.</p>
-            </div>
-            <div class="row mb_30">
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-dinner"></i>Restaurant</h4>
-                        <p >Fine dining is enhanced through a blend of western and traditional cuisines, designed by our masterchefs.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Sports Club</h4>
-                        <p>The Sports club is committed to provide a healthy sporting habit among the guests.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
-                        <p>Our pools are designed to offer a sombre and a tranquil experience to the guests.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-car"></i>Rent a Car</h4>
-                        <p>24*7 Car Rental Services at your Door step. Wide varieties of Cars, with amazing offers.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-construction"></i>Gymnesium</h4>
-                        <p>Our Hotel exhibits a fully equipped fitness centre offering a range of technologies like cardio machines. </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-coffee-cup"></i>Bar</h4>
-                        <p>Fuchsia drapes, warm red light, and sequins set a dramatic & a musical tone for this night club.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ Facilities Area  =================-->
-
-    <!--================ About History Area  =================-->
-    <section class="about_history_area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 d_flex align-items-center">
-                    <div class="about_content ">
-                        <h2 class="title title_color">About Us <br>Mission & Vision</h2>
-                        <p>Situated in the heart of Chennai, overlooking the city’s verdant foliage. It embodies the highest standards in Indian hospitality balanced with elegant restraint in a prime property with distinct personality. The Grand Peninsula has 522 rooms and 78 luxuriously appointed service apartments- collectively its 600 spacious guest rooms, suites and luxury service apartments, are the epitome of Indian grace and style, expertly delegated with thoughtful amenities.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img class="img-fluid" src="image/about_bg.jpg" alt="img">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ About History Area  =================-->
-
-    <!--================ Testimonial Area  =================-->
-    <section class="testimonial_area section_gap">
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_color">Testimonial from our Clients</h2>
-                </p>
-            </div>
-            <div class="testimonial_slider owl-carousel">
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                    <div class="media-body">
-                        <p>Fantastic hotel, my room was incredible. Food was of great quality. The Italian and Asian restaurant were my favourite. If I need to come again, Grand Peninsula will be my hotel of choice! Brought some Fabelle chocolate home for the family, they loved it!</p>
-                        <a href="#">
-                            <h4 class="sec_h4">Fanny Spencer</h4>
-                        </a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/testtimonial-2.jpg" alt="">
-                    <div class="media-body">
-                        <p>By far one of the best properties i have stayed in. Excellent rooms especially the tower rooms(do book them if not much price difference). Better than even some of the luxury Oberoi properties. Food is amazing,right from breakfast at Madras pavillion to dinner at peshawri/pan-asia. Staff is very professional and take excellent care of guests. Location very close to airport</p>
-                        <a href="#">
-                            <h4 class="sec_h4">Fanny Spencer</h4>
-                        </a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/testtimonial-2.jpg" alt="">
-                    <div class="media-body">
-                        <p>Undoubtedly the best hotel in Chennai. The staff is warm & courteous and take care of every need. Rooms are nicely furnished and clean. Tower rooms are bigger and the hotel also has suites of 1 or 2 bedrooms for families with a fully stocked kitchenette, washer etc.The hotel is truly grand and frankly I could not have asked for anything else.</p>
-                        <a href="#">
-                            <h4 class="sec_h4">Fanny Spencer</h4>
-                        </a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                    <div class="media-body">
-                        <p>Stay in the tower rooms. Very large, luxurious. Very attentive staff. Beautiful hotel. Love the outdoor pools and garden on the 35th floor. Very nice spa as well. Breakfast is fantastic with large variety of foods. Do try the Utapam, Vada Sambar and Dosa. Also very good French Toast. The High Tea time and Happy Hour were included with our stay and made it worth it. All you can drink and eat. Good snacks. The staff is fantastic. Hang out in the hotel and relax. Shout out to Sidharth (waiter/bar keep) in the Tea lounge. Very good service.</p>
-                        <a href="#">
-                            <h4 class="sec_h4">Fanny Spencer</h4>
-                        </a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ Testimonial Area  =================-->
+   
 
     <!--================ start footer Area  =================-->
     <footer class="footer-area section_gap">
