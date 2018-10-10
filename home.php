@@ -100,7 +100,6 @@ else {
                     <h2>Relax Your Mind</h2>
                     <p>Service is exceptionally friendly and amenities are plentiful, ensuring the most pleasurable and
                         memorable stay.</p>
-                    <a href="#" class="btn theme_btn button_hover">Explore now</a>
                 </div>
             </div>
         </div>
@@ -443,7 +442,10 @@ else {
                     made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
+                
                 <div class="col-lg-4 col-sm-12 footer-social">
+                    
+                    
                     <a href="#"><i class="fa fa-facebook"></i></a>
                     <a href="#"><i class="fa fa-twitter"></i></a>
                     <a href="#"><i class="fa fa-dribbble"></i></a>
