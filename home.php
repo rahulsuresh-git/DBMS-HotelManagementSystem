@@ -446,10 +446,10 @@ else {
                 <div class="col-lg-4 col-sm-12 footer-social">
                     
                     
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                    <a href="#"><i class="fa fa-behance"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/login?lang=en"><i class="fa fa-twitter"></i></a>
+                    <a href="https://dribbble.com"><i class="fa fa-dribbble"></i></a>
+                    <a href="https://www.behance.net/"><i class="fa fa-behance"></i></a>
                 </div>
             </div>
         </div>
