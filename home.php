@@ -249,7 +249,6 @@ else {
             </div>
         </div>
     </section>
-    <!--================ Accomodation Area  =================-->
 
     <!--================ Facilities Area  =================-->
     <section class="facilities_area section_gap">
@@ -300,8 +299,7 @@ else {
             </div>
         </div>
     </section>
-    <!--================ Facilities Area  =================-->
-
+    
     <!--================ About History Area  =================-->
     <section class="about_history_area section_gap">
         <div class="container">
@@ -318,7 +316,7 @@ else {
             </div>
         </div>
     </section>
-    <!--================ About History Area  =================-->
+    
 
     <!--================ Testimonial Area  =================-->
     <section class="testimonial_area section_gap">
@@ -395,8 +393,7 @@ else {
             </div>
         </div>
     </section>
-    <!--================ Testimonial Area  =================-->
-
+    
     <!--================ start footer Area  =================-->
     <footer class="footer-area section_gap">
         <div class="container">
