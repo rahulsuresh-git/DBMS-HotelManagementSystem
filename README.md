@@ -3,7 +3,7 @@
 ![Authentication Screen](https://i.imgur.com/zvQShXt.png)🏨 Hotel Management System ~ A full fledged hotel management system with the ability to make bookings over a wide variety of rooms and duration.
 
 ## Tech Stack
-❤️ HTML5, CSS3, Javascript<br>
+❤️ HTML5, CSS3, Javascript, JQuery<br>
 🔥 PHP + SQL
 
 ## Screens
